@@ -554,6 +554,26 @@ function Flow() {
   );
 }
 
+function FAQSection() {
+  return (
+    <Section id="faq" title="よくある質問">
+      <div className="space-y-3">
+        {FAQ.map((item, i) => (
+          <details key={i} className="group rounded-2xl border border-white/10 p-5 bg-neutral-900/70">
+            <summary className="cursor-pointer list-none font-semibold">
+              <span className="mr-2" style={{ color: "var(--accent)" }}>Q.</span> {item.q}
+            </summary>
+            <p className="mt-3 text-gray-300 whitespace-pre-line">
+              <span className="mr-2 font-semibold text-gray-400">A.</span>
+              {item.a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
 // ▼ 追加：Netlify Forms 対応のお問い合わせフォーム
 function ContactSection() {
   return (
@@ -580,26 +600,6 @@ function ContactSection() {
           送信
         </button>
       </form>
-    </Section>
-  );
-}
-
-function FAQSection() {
-  return (
-    <Section id="faq" title="よくある質問">
-      <div className="space-y-3">
-        {FAQ.map((item, i) => (
-          <details key={i} className="group rounded-2xl border border-white/10 p-5 bg-neutral-900/70">
-            <summary className="cursor-pointer list-none font-semibold">
-              <span className="mr-2" style={{ color: "var(--accent)" }}>Q.</span> {item.q}
-            </summary>
-            <p className="mt-3 text-gray-300 whitespace-pre-line">
-              <span className="mr-2 font-semibold text-gray-400">A.</span>
-              {item.a}
-            </p>
-          </details>
-        ))}
-      </div>
     </Section>
   );
 }
