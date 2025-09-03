@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --accent:#EE1D52; /* TikTok pink */
+  --accent2:#69C9D0; /* TikTok cyan */
+  --brand-dark:#000;
+  --brand-light:#fff;
+}
+
+html,body,#root{min-height:100%;}
