@@ -6,7 +6,7 @@ import React from "react";
 const BRAND = {
   name: "JoyVoyage",
   primary: "#EE1D52", // TikTok Pink accent
-  dark: "#000000",
+  dark: "#202020",
   light: "#ffffff",
 };
 
