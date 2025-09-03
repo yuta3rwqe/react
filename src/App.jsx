@@ -22,14 +22,14 @@ const LINKS = {
 };
 
 const CREATORS = [
-  { name: "しろ", handle: "@x_v0_", img: "/illustrations/1.jpg" },
-  { name: "おまめちゃあん", handle: "@omame", img: "/illustrations/2.jpg" },
-  { name: "かのん", handle: "@nyan", img: "/illustrations/3.jpg" },
-  { name: "わたあめちゃん", handle: "@wataame", img: "/illustrations/4.jpg" },
-  { name: "かるちゃん", handle: "@karu", img: "/illustrations/5.jpg" },
-  { name: "mayu", handle: "@mayu", img: "/illustrations/6.jpg" },
-  { name: "Hinako", handle: "@hina", img: "/illustrations/7.jpeg" },
-  { name: "美星", handle: "@mihoshi", img: "/illustrations/8.jpeg" },
+  { name: "李可馨", handle: "@li_kexin", img: "/illustrations/1.jpg" },
+  { name: "周依依", handle: "@yiyi.zhou", img: "/illustrations/2.jpg" },
+  { name: "林可晴", handle: "@keqing_lin", img: "/illustrations/3.jpg" },
+  { name: "赵悦彤", handle: "@yuetong_zhao", img: "/illustrations/4.jpg" },
+  { name: "王若宁", handle: "@wang_ruoning", img: "/illustrations/5.jpg" },
+  { name: "陈静姝", handle: "@jingshu_chen", img: "/illustrations/6.jpg" },
+  { name: "何婧怡", handle: "@he_jingyi", img: "/illustrations/7.jpeg" },
+  { name: "许雨桐", handle: "@yutong_xu", img: "/illustrations/8.jpeg" },
 ];
 
 const PROBLEMS = [
