@@ -307,7 +307,7 @@ function Hero() {
           </div>
         </div>
         <div className="relative">
-          <img src="/illustrations/hero-live-streaming.png" alt="ライブ配信のイラスト" className="w-full max-w-xl mx-auto drop-shadow" />
+          <img src="/illustrations/promo-movie.mp4" alt="ライブ配信のイラスト" className="w-full max-w-xl mx-auto drop-shadow" />
           {/* Cyan glow */}
           <div className="absolute -z-10 blur-3xl opacity-25" style={{ inset: "-20% auto auto -20%", width: "60%", height: "60%", background: "radial-gradient(60% 60% at 50% 50%, var(--accent2), transparent)" }} />
         </div>
