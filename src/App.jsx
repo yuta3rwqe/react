@@ -28,8 +28,8 @@ const CREATORS = [
   { name: "わたあめちゃん", handle: "@wataame", img: "/illustrations/4.jpg" },
   { name: "かるちゃん", handle: "@karu", img: "/illustrations/5.jpg" },
   { name: "mayu", handle: "@mayu", img: "/illustrations/6.jpg" },
-  { name: "Hinako", handle: "@hina", img: "/illustrations/7.jpg" },
-  { name: "美星", handle: "@mihoshi", img: "/illustrations/8.jpg" },
+  { name: "Hinako", handle: "@hina", img: "/illustrations/7.jpeg" },
+  { name: "美星", handle: "@mihoshi", img: "/illustrations/8.jpeg" },
 ];
 
 const PROBLEMS = [
