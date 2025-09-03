@@ -238,8 +238,8 @@ export default function NextwaveLikeSite() {
       <ApplyCTA />
       <Flow />
       {/* ▼ お問い合わせフォーム（#contact） */}
-      <ContactSection />
       <FAQSection />
+      <ContactSection />
       <Footer />
     </div>
   );
