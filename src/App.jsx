@@ -22,14 +22,14 @@ const LINKS = {
 };
 
 const CREATORS = [
-  { name: "しろ", handle: "@x_v0_", img: "/illustrations/creator-01.png" },
-  { name: "おまめちゃあん", handle: "@omame", img: "/illustrations/creator-02.png" },
-  { name: "かのん", handle: "@nyan", img: "/illustrations/creator-03.png" },
-  { name: "わたあめちゃん", handle: "@wataame", img: "/illustrations/creator-04.png" },
-  { name: "かるちゃん", handle: "@karu", img: "/illustrations/creator-05.png" },
-  { name: "mayu", handle: "@mayu", img: "/illustrations/creator-06.png" },
-  { name: "Hinako", handle: "@hina", img: "/illustrations/creator-07.png" },
-  { name: "美星", handle: "@mihoshi", img: "/illustrations/creator-08.png" },
+  { name: "しろ", handle: "@x_v0_", img: "/illustrations/1.jpg" },
+  { name: "おまめちゃあん", handle: "@omame", img: "/illustrations/2.jpg" },
+  { name: "かのん", handle: "@nyan", img: "/illustrations/3.jpg" },
+  { name: "わたあめちゃん", handle: "@wataame", img: "/illustrations/4.jpg" },
+  { name: "かるちゃん", handle: "@karu", img: "/illustrations/5.jpg" },
+  { name: "mayu", handle: "@mayu", img: "/illustrations/6.jpg" },
+  { name: "Hinako", handle: "@hina", img: "/illustrations/7.jpg" },
+  { name: "美星", handle: "@mihoshi", img: "/illustrations/8.jpg" },
 ];
 
 const PROBLEMS = [
