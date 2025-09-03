@@ -574,36 +574,6 @@ function FAQSection() {
   );
 }
 
-// ▼ 追加：Netlify Forms 対応のお問い合わせフォーム
-function ContactSection() {
-  return (
-    <Section id="contact" title="お問い合わせ">
-      <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" className="space-y-4 max-w-2xl">
-        {/* Netlifyがフォームを識別するための hidden フィールド */}
-        <input type="hidden" name="form-name" value="contact" />
-        {/* 迷惑対策（bot-field） */}
-        <input type="text" name="bot-field" className="hidden" aria-hidden="true" />
-
-        <label className="block">
-          <span className="text-sm text-gray-300">お名前</span>
-          <input name="name" required className="mt-1 w-full rounded-xl border border-white/10 bg-neutral-900 text-white px-4 py-3 placeholder-gray-500" placeholder="山田 太郎" />
-        </label>
-        <label className="block">
-          <span className="text-sm text-gray-300">メール</span>
-          <input type="email" name="email" required className="mt-1 w-full rounded-xl border border-white/10 bg-neutral-900 text-white px-4 py-3 placeholder-gray-500" placeholder="mail@example.com" />
-        </label>
-        <label className="block">
-          <span className="text-sm text-gray-300">内容</span>
-          <textarea name="message" rows={5} required className="mt-1 w-full rounded-xl border border-white/10 bg-neutral-900 text-white px-4 py-3 placeholder-gray-500" placeholder="ご用件をご記入ください" />
-        </label>
-        <button className="rounded-xl text-white font-semibold px-5 py-3 hover:opacity-90" style={{ backgroundColor: "var(--accent)" }}>
-          送信
-        </button>
-      </form>
-    </Section>
-  );
-}
-
 // ▼ 送信完了ページ（/thank-you）
 function ThankYouPage() {
   const [seconds, setSeconds] = React.useState(THANKYOU_REDIRECT_SECONDS);
@@ -659,6 +629,36 @@ function ThankYouPage() {
         </div>
       </main>
     </div>
+  );
+}
+
+// ▼ 追加：Netlify Forms 対応のお問い合わせフォーム
+function ContactSection() {
+  return (
+    <Section id="contact" title="お問い合わせ">
+      <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" className="space-y-4 max-w-2xl">
+        {/* Netlifyがフォームを識別するための hidden フィールド */}
+        <input type="hidden" name="form-name" value="contact" />
+        {/* 迷惑対策（bot-field） */}
+        <input type="text" name="bot-field" className="hidden" aria-hidden="true" />
+
+        <label className="block">
+          <span className="text-sm text-gray-300">お名前</span>
+          <input name="name" required className="mt-1 w-full rounded-xl border border-white/10 bg-neutral-900 text-white px-4 py-3 placeholder-gray-500" placeholder="山田 太郎" />
+        </label>
+        <label className="block">
+          <span className="text-sm text-gray-300">メール</span>
+          <input type="email" name="email" required className="mt-1 w-full rounded-xl border border-white/10 bg-neutral-900 text-white px-4 py-3 placeholder-gray-500" placeholder="mail@example.com" />
+        </label>
+        <label className="block">
+          <span className="text-sm text-gray-300">内容</span>
+          <textarea name="message" rows={5} required className="mt-1 w-full rounded-xl border border-white/10 bg-neutral-900 text-white px-4 py-3 placeholder-gray-500" placeholder="ご用件をご記入ください" />
+        </label>
+        <button className="rounded-xl text-white font-semibold px-5 py-3 hover:opacity-90" style={{ backgroundColor: "var(--accent)" }}>
+          送信
+        </button>
+      </form>
+    </Section>
   );
 }
 
