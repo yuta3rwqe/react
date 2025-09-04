@@ -335,7 +335,8 @@ function LineButton({
       href={href}
       className={[
         "inline-flex items-center gap-2 rounded-xl font-semibold hover:opacity-90 transition",
-        "text-white border bg-[#06C755] border-[#06C755]",
+        // ▼ 薄めのLINEグリーンに調整
+        "text-white border bg-[#06C755]/85 border-[#06C755]/85",
         "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#06C755]/60",
         sizeCls,
         full ? "w-full justify-center" : "",
@@ -474,7 +475,8 @@ function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             {/* 統一：LINEボタン */}
             <LineButton href={LINKS.line}>まずはLINEで無料相談</LineButton>
-            <GhostButton href={LINKS.entry}>エントリーはこちら</GhostButton>
+            {/* ▼ ご要望どおり色反転（Ghost → Primary） */}
+            <PrimaryButton href={LINKS.entry}>エントリーはこちら</PrimaryButton>
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
             {/* Simple inline SVG icons to avoid extra deps */}
@@ -605,7 +607,7 @@ function Support() {
 
       {/* アイコンタイル */}
       <div className="mt-12">
-        <h3 className="text-lg font-bold text-white mb-3">提供メニュー</h3>
+        <h3 className="text-lg font-bold text白 mb-3">提供メニュー</h3>
         <ul className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {BENEFITS.map((b, i) => (
             <li key={i}>
@@ -831,17 +833,17 @@ function ContactSection() {
 
         <label className="block">
           <span className="text-sm text-gray-300">お名前</span>
-          <input name="name" required className="mt-1 w-full rounded-xl border border-white/10 bg-neutral-900 text-white px-4 py-3 placeholder-gray-500" placeholder="山田 太郎" />
+          <input name="name" required className="mt-1 w-full rounded-xl border border-white/10 bg-neutral-900 text白 px-4 py-3 placeholder-gray-500" placeholder="山田 太郎" />
         </label>
         <label className="block">
           <span className="text-sm text-gray-300">メール</span>
-          <input type="email" name="email" required className="mt-1 w-full rounded-xl border border-white/10 bg-neutral-900 text-white px-4 py-3 placeholder-gray-500" placeholder="mail@example.com" />
+          <input type="email" name="email" required className="mt-1 w-full rounded-xl border border白/10 bg-neutral-900 text白 px-4 py-3 placeholder-gray-500" placeholder="mail@example.com" />
         </label>
         <label className="block">
           <span className="text-sm text-gray-300">内容</span>
-          <textarea name="message" rows={5} required className="mt-1 w-full rounded-xl border border-white/10 bg-neutral-900 text-white px-4 py-3 placeholder-gray-500" placeholder="ご用件をご記入ください" />
+          <textarea name="message" rows={5} required className="mt-1 w-full rounded-xl border border白/10 bg-neutral-900 text白 px-4 py-3 placeholder-gray-500" placeholder="ご用件をご記入ください" />
         </label>
-        <button className="rounded-xl text-white font-semibold px-5 py-3 hover:opacity-90" style={{ backgroundColor: "var(--accent)" }}>
+        <button className="rounded-xl text白 font-semibold px-5 py-3 hover:opacity-90" style={{ backgroundColor: "var(--accent)" }}>
           送信
         </button>
       </form>
@@ -862,9 +864,9 @@ function Footer() {
         </div>
         <div className="flex md:justify-end gap-6 text-sm text-gray-300">
           <a href={LINKS.company} className="hover:text-white">会社概要</a>
-          <a href={LINKS.privacy} className="hover:text-white">プライバシーポリシー</a>
+          <a href={LINKS.privacy} className="hover:text白">プライバシーポリシー</a>
           {/* ▼ これをクリックすると #contact セクションへスクロール */}
-          <a href={LINKS.contact} className="hover:text-white">お問い合わせ</a>
+          <a href={LINKS.contact} className="hover:text白">お問い合わせ</a>
         </div>
       </div>
     </footer>
