@@ -862,7 +862,7 @@ function Footer() {
           <p className="mt-2 text-gray-400 text-sm">© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</p>
         </div>
         <div className="flex md:justify-end gap-6 text-sm text-gray-300">
-          <a href={LINKS.company} className="hover:text-white">会社概要</a>
+          <a href="/company" className="hover:text-white">会社概要</a>
           <a href={LINKS.privacy} className="hover:text白">プライバシーポリシー</a>
           {/* ▼ これをクリックすると #contact セクションへスクロール */}
           <a href={LINKS.contact} className="hover:text白">お問い合わせ</a>
