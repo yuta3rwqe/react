@@ -44,7 +44,6 @@ const STATS = [
   { title: "ライブ配信のトップ代理店", icon: "/illustrations/stat-agency.png" },
   { title: "TikTok売上 1位継続", icon: "/illustrations/stat-top.png" },
   { title: "世界4拠点で展開", icon: "/illustrations/stat-globe.png" },
-  { title: "約11社と業務提携", icon: "/illustrations/stat-handshake.png" },
 ];
 
 const SUPPORT = [
