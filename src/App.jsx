@@ -192,12 +192,7 @@ function CompanyPage() {
           <p className="mt-4 max-w-2xl text-white/90">
             JOY VOYAGE（株式会社ジョイボヤージュ）の基本情報です。所在地・設立・事業内容をご確認いただけます。
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a href="/#contact" className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white" style={{ backgroundColor: "#EE1D52" }}>
-              お問い合わせ
-            </a>
           </div>
-        </div>
       </section>
 
       {/* BODY（既存ルールを踏襲：会社名/所在地(郵便番号で改行)/設立・地図・CTA等） */}
@@ -380,33 +375,16 @@ export default function NextwaveLikeSite() {
 // ----------------------
 function Header() {
   return (
-    <div className="sticky top-0 z-50 backdrop-blur bg-black/70 border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2">
-          <img src="/illustrations/logo.svg" alt="logo" className="h-8 w-auto" />
-          <span className="font-extrabold text-lg tracking-tight">{BRAND.name}</span>
-        </a>
-        <nav className="hidden md:flex items-center gap-6 text-sm text-gray-300">
-          <a href="#creators" className="hover:text-white">クリエイター</a>
-          <a href="#problems" className="hover:text-white">お悩み</a>
-          <a href="#about" className="hover:text-white">{BRAND.name}とは</a>
-          <a href="#support" className="hover:text-white">サポート</a>
-          <a href="#commerce" className="hover:text-white">新しい働き方</a>
-          <a href="#voices" className="hover:text-white">声</a>
-          <a href="#faq" className="hover:text-white">FAQ</a>
-                  <a href="/company" className="hover:text-white">会社概要</a>
+    <header className="sticky top-0 z-50 bg-[#06C755] text-white shadow-sm">
+      <div className="mx-auto max-w-7xl px-4 h-14 flex items-center justify-between">
+        <a href="/" className="font-semibold tracking-wide">JOY VOYAGE</a>
+        <nav className="flex items-center gap-5 text-white/90 text-sm">
+          <a href="/" className="hover:text-white">ホーム</a>
+          <a href="/company" className="hover:text-white">会社概要</a>
+          <a href="/#contact" className="hover:text-white">お問い合わせ</a>
         </nav>
-        <div className="hidden md:flex items-center gap-3">
-          <GhostButton href={LINKS.line}>LINEで相談</GhostButton>
-          <PrimaryButton href={LINKS.entry}>エントリー</PrimaryButton>
-        </div>
-        <div className="md:hidden">
-          <a href={LINKS.entry} className="rounded-xl px-3 py-2 text-sm text-white" style={{ backgroundColor: "var(--accent)" }}>
-            エントリー
-          </a>
-        </div>
       </div>
-    </div>
+    </header>
   );
 }
 
