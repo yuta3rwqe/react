@@ -236,7 +236,7 @@ function CompanyPage() {
 
             <aside className="space-y-6">
               <div className="rounded-2xl border border-white/10 bg-neutral-900/70 shadow-sm p-6">
-                <h3 className="text-base font-semibold">事業内容</h3>
+                <h3 className="text/base font-semibold">事業内容</h3>
                 <ul className="mt-4 space-y-3 text-white/90">
                   <li className="flex items-start gap-3">
                     <span className="mt-1 h-2.5 w-2.5 rounded-full" style={{ backgroundColor: "var(--accent2)" }} />
@@ -312,9 +312,50 @@ function Card({ children }) {
   return <div className="rounded-2xl border p-6 shadow-sm bg-neutral-900/70 border-white/10 flex flex-col items-center justify-center text-center">{children}</div>;
 }
 
+// ----------------------
+// 共通 LineButton（統一デザイン）
+// ----------------------
+function LineButton({
+  href = LINKS.line,
+  children = "LINEで相談",
+  size = "md",        // "sm" | "md" | "lg"
+  full = false,       // true で幅いっぱい
+  external = true,    // true で新規タブ
+  className = "",
+  icon = true,        // false でアイコン非表示
+  ...props
+}) {
+  const sizeCls =
+    size === "sm" ? "px-3 py-2 text-sm"
+    : size === "lg" ? "px-6 py-3 text-base"
+    : "px-5 py-3";
+
+  return (
+    <a
+      href={href}
+      className={[
+        "inline-flex items-center gap-2 rounded-xl font-semibold hover:opacity-90 transition",
+        "text-white border bg-[#06C755] border-[#06C755]",
+        "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#06C755]/60",
+        sizeCls,
+        full ? "w-full justify-center" : "",
+        className
+      ].join(" ").trim()}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      aria-label={typeof children === "string" ? children : "LINEで相談"}
+      {...props}
+    >
+      {icon && (
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" className="shrink-0">
+          <path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3v3l4-3h9a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" fill="currentColor"/>
+        </svg>
+      )}
+      {children}
+    </a>
+  );
+}
 
 // Decorative divider between sections
-
 function LineIcon({ className }) {
   return (
     <svg className={className} viewBox="0 0 36 36" aria-hidden="true">
@@ -356,7 +397,6 @@ export default function NextwaveLikeSite() {
   if (path === "/company" || params.get("page") === "company") {
     return <CompanyPage />;
   }
-
 
   return (
     <div className="min-h-screen bg-black text-white" style={THEME_CSS_VARS}>
@@ -403,10 +443,11 @@ function Header() {
           <a href="/#commerce" className="hover:text-white">新しい働き方</a>
           <a href="/#voices" className="hover:text-white">声</a>
           <a href="/#faq" className="hover:text-white">FAQ</a>
-                  <a href="/company" className="hover:text-white">会社概要</a>
+          <a href="/company" className="hover:text-white">会社概要</a>
         </nav>
         <div className="hidden md:flex items-center gap-3">
-          <GhostButton href={LINKS.line}>LINEで相談</GhostButton>
+          {/* 統一：LINEボタン */}
+          <LineButton href={LINKS.line}>LINEで相談</LineButton>
           <PrimaryButton href={LINKS.entry}>エントリー</PrimaryButton>
         </div>
         <div className="md:hidden">
@@ -431,7 +472,8 @@ function Hero() {
             無料相談で最適なスタートを切りましょう。
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <PrimaryButton href={LINKS.line}>まずはLINEで無料相談</PrimaryButton>
+            {/* 統一：LINEボタン */}
+            <LineButton href={LINKS.line}>まずはLINEで無料相談</LineButton>
             <GhostButton href={LINKS.entry}>エントリーはこちら</GhostButton>
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
@@ -591,7 +633,8 @@ function Commerce() {
             ))}
           </ul>
           <div className="mt-6 flex gap-3">
-            <PrimaryButton href={LINKS.line}>LINEで相談</PrimaryButton>
+            {/* 統一：LINEボタン */}
+            <LineButton href={LINKS.line}>LINEで相談</LineButton>
             <GhostButton href={LINKS.entry}>エントリー</GhostButton>
           </div>
         </div>
@@ -668,7 +711,8 @@ function ApplyCTA() {
         <p className="mt-3 text-gray-300">迷っているなら、まずは相談を！</p>
         <div className="mt-6 flex items-center justify-center gap-3">
           <PrimaryButton href={LINKS.entry}>今すぐエントリー</PrimaryButton>
-          <GhostButton href={LINKS.line}>LINEで無料相談</GhostButton>
+          {/* 統一：LINEボタン */}
+          <LineButton href={LINKS.line}>LINEで無料相談</LineButton>
         </div>
       </div>
     </section>
@@ -767,9 +811,8 @@ function ThankYouPage() {
           <a href="/" className="rounded-xl text-white font-semibold px-5 py-3 hover:opacity-90" style={{ backgroundColor: "var(--accent)" }}>
             今すぐトップへ戻る
           </a>
-          <a href={LINKS.line} className="text-white rounded-xl font-semibold px-5 py-3 border hover:opacity-90" style={{ color: "var(--accent)", borderColor: "var(--accent)", backgroundColor: "#06C755",29,82,.08)" }}><LineIcon className="mr-2 h-4 w-4" /><LineIcon className="mr-2 h-4 w-4" />
-            LINEで相談
-          </a>
+          {/* 統一：LINEボタン（ビルドエラーの原因だった壊れた style を撤去） */}
+          <LineButton href={LINKS.line}>LINEで相談</LineButton>
         </div>
       </main>
     </div>
