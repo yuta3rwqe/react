@@ -8,3 +8,10 @@
   to = "/index.html"
   status = 200
   force = true
+
+# Thank-you redirect (also works after POST)
+[[redirects]]
+  from = "/thank-you"
+  to = "/?thank-you=1"
+  status = 303
+  force = true
