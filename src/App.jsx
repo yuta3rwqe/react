@@ -168,47 +168,42 @@ function normalizePathname(pathname) {
 
 // ----------------------
 
-// 会社概要ページ（スタイリッシュ版：ユーザー要望反映）
+// 会社概要ページ（半分サイズのデュアルグロウ / CTA #EE1D52）
 function CompanyPage() {
   return (
     <div className="min-h-screen bg-black text-white" style={THEME_CSS_VARS}>
       <Header />
 
-      {/* HERO（デュアルグロウ大きめ） */}
+      {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none select-none">
           <div
-            className="absolute -top-48 -left-48 h-[44rem] w-[44rem] rounded-full blur-3xl"
+            className="absolute -top-24 -left-24 h-[22rem] w-[22rem] rounded-full blur-3xl"
             style={{ background: "radial-gradient(closest-side, var(--accent) 30%, transparent)" }}
           />
           <div
-            className="absolute -bottom-48 -right-48 h-[44rem] w-[44rem] rounded-full blur-3xl"
+            className="absolute -bottom-24 -right-24 h-[22rem] w-[22rem] rounded-full blur-3xl"
             style={{ background: "radial-gradient(closest-side, var(--accent2) 30%, transparent)" }}
           />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-16 md:py-24">
           <p className="text-sm tracking-widest text-white/70">COMPANY</p>
           <h1 className="mt-2 text-3xl md:text-5xl font-extrabold tracking-tight">会社概要</h1>
-          <p className="mt-4 max-w-2xl text-white/80">
+          <p className="mt-4 max-w-2xl text-white/90">
             JOY VOYAGE（株式会社ジョイボヤージュ）の基本情報です。所在地・設立・事業内容をご確認いただけます。
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="/#contact"
-              className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/80"
-              style={{ backgroundColor: "#EE1D52" }}
-            >
+            <a href="/#contact" className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white" style={{ backgroundColor: "#EE1D52" }}>
               お問い合わせ
             </a>
           </div>
         </div>
       </section>
 
-      {/* BODY */}
+      {/* BODY（既存ルールを踏襲：会社名/所在地(郵便番号で改行)/設立・地図・CTA等） */}
       <section className="py-12 md:py-16">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* 左：概要カード */}
             <div className="lg:col-span-2">
               <div className="rounded-2xl border border-white/10 bg-neutral-900/70 shadow-sm overflow-hidden">
                 <div className="border-b border-white/10 px-6 py-5 flex items-center justify-between">
@@ -226,13 +221,7 @@ function CompanyPage() {
                         <div>〒104-0061</div>
                         <div>東京都中央区銀座8-14-9 7F</div>
                         <div className="mt-3">
-                          <iframe
-                            title="会社所在地"
-                            src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%8A%80%E5%BA%A78-14-9%207F&output=embed"
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            className="w-full max-w-sm h-40 rounded-xl border border-white/10"
-                          />
+                          <iframe title="会社所在地" src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%8A%80%E5%BA%A78-14-9%207F&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full max-w-sm h-40 rounded-xl border border-white/10" />
                         </div>
                       </div>
                     </dd>
@@ -245,7 +234,6 @@ function CompanyPage() {
               </div>
             </div>
 
-            {/* 右：事業内容のみ（SNSリンクカード削除済み） */}
             <aside className="space-y-6">
               <div className="rounded-2xl border border-white/10 bg-neutral-900/70 shadow-sm p-6">
                 <h3 className="text-base font-semibold">事業内容</h3>
@@ -263,16 +251,11 @@ function CompanyPage() {
             </aside>
           </div>
 
-          {/* 下部CTA（色を#EE1D52で統一） */}
           <div className="mt-10 rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/0 p-8">
             <p className="text-white/80">採用・提携のご相談も承っています。</p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <a href="/#apply" className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white" style={{ backgroundColor: "#EE1D52" }}>
-                配信者エントリー
-              </a>
-              <a href="/#contact" className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white" style={{ backgroundColor: "#EE1D52" }}>
-                お問い合わせ
-              </a>
+              <a href="/#apply" className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white" style={{ backgroundColor: "#EE1D52" }}>配信者エントリー</a>
+              <a href="/#contact" className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white" style={{ backgroundColor: "#EE1D52" }}>お問い合わせ</a>
             </div>
           </div>
         </div>
@@ -326,7 +309,29 @@ function GhostButton({ href, children }) {
 }
 
 function Card({ children }) {
-  return <div className="rounded-2xl border p-6 shadow-sm bg-neutral-900/70 border-white/10">{children}</div>;
+  return <div className="rounded-2xl border p-6 shadow-sm bg-neutral-900/70 border-white/10 flex flex-col items-center justify-center text-center">{children}</div>;
+}
+
+
+// Decorative divider between sections
+function DividerWave() {
+  return (
+    <div className="relative h-10 md:h-12 -mb-px overflow-hidden">
+      <svg viewBox="0 0 1440 120" className="absolute inset-0 w-full h-full" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          {/* More vivid gradient */}
+          <linearGradient id="grad" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stopColor="var(--accent)" stopOpacity="0.0" />
+            <stop offset="40%" stopColor="var(--accent2)" stopOpacity="0.65" />
+            <stop offset="60%" stopColor="var(--accent)" stopOpacity="0.65" />
+            <stop offset="100%" stopColor="var(--accent2)" stopOpacity="0.0" />
+          </linearGradient>
+        </defs>
+        {/* Thinner wave (lower amplitude) */}
+        <path d="M0,72 C240,78 480,66 720,72 C960,78 1200,66 1440,72 L1440,120 L0,120 Z" fill="url(#grad)"></path>
+      </svg>
+    </div>
+  );
 }
 
 // ----------------------
@@ -348,14 +353,19 @@ export default function NextwaveLikeSite() {
     <div className="min-h-screen bg-black text-white" style={THEME_CSS_VARS}>
       <Header />
       <Hero />
+      <DividerWave />
       <Creators />
+      <DividerWave />
       <Problems />
+      <DividerWave />
       <About />
+      <DividerWave />
       <Support />
       <Commerce />
       <WorkStyles />
       <Voices />
       <ApplyCTA />
+      <DividerWave />
       <Flow />
       {/* ▼ お問い合わせフォーム（#contact） */}
       <FAQSection />
@@ -415,20 +425,24 @@ function Hero() {
             <PrimaryButton href={LINKS.line}>まずはLINEで無料相談</PrimaryButton>
             <GhostButton href={LINKS.entry}>エントリーはこちら</GhostButton>
           </div>
-          <div className="mt-6 flex gap-4 text-gray-400">
-            <a href={LINKS.instagram} aria-label="Instagram" className="hover:text-white">
-              Instagram
+          <div className="mt-6 flex flex-wrap gap-3">
+            {/* Simple inline SVG icons to avoid extra deps */}
+            <a href={LINKS.instagram} aria-label="Instagram" className="inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-white/10 hover:ring-white/20 bg-white/5 hover:bg-white/10">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#E4405F" }}><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm11 1.8a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 .001 6.001A3 3 0 0 0 12 9z"/></svg>
+              <span className="text-white/90">Instagram</span>
             </a>
-            <a href={LINKS.x} aria-label="X" className="hover:text-white">
-              X
+            <a href={LINKS.x} aria-label="X" className="inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-white/10 hover:ring-white/20 bg-white/5 hover:bg-white/10">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#FFFFFF" }}><path fill="currentColor" d="M3 3h3.7l5.3 7.2L17.6 3H21l-7.2 9.7L21 21h-3.7l-5.6-7.5L6.4 21H3l7.5-10L3 3z"/></svg>
+              <span className="text-white/90">X</span>
             </a>
-            <a href={LINKS.tiktok} aria-label="TikTok" className="hover:text-white">
-              TikTok
+            <a href={LINKS.tiktok} aria-label="TikTok" className="inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-white/10 hover:ring-white/20 bg-white/5 hover:bg-white/10">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#69C9D0" }}><path fill="currentColor" d="M16 3c.4 2.6 2.2 4.5 5 5v3.2c-1.9 0-3.6-.6-5-1.7v5.5c0 4.1-3 7.6-7.4 7.9C4.8 23.2 1.1 20 1 15.8 1 11.7 4.3 8.4 8.4 8.4c.6 0 1.1.1 1.6.2v3.4c-.5-.2-1-.3-1.6-.3-2.2 0-4 1.8-4 4 0 2.3 2 4.2 4.4 3.9 1.9-.2 3.4-1.9 3.4-3.9V3h3.8z"/></svg>
+              <span className="text-white/90">TikTok</span>
             </a>
           </div>
         </div>
         <div className="relative">
-          <img src="/illustrations/promo-movie.mp4" alt="ライブ配信のイラスト" className="w-full max-w-xl mx-auto drop-shadow" />
+          <video src="/illustrations/promo-movie.mp4" className="w-full max-w-xl mx-auto drop-shadow rounded-2xl" autoPlay muted loop playsInline preload="metadata" poster="/illustrations/1.JPG" />
           {/* Cyan glow */}
           <div className="absolute -z-10 blur-3xl opacity-25" style={{ inset: "-20% auto auto -20%", width: "60%", height: "60%", background: "radial-gradient(60% 60% at 50% 50%, var(--accent2), transparent)" }} />
         </div>
@@ -464,7 +478,7 @@ function Problems() {
         {PROBLEMS.map((p, i) => (
           <li key={i}>
             <Card>
-              <img src={p.img} alt="" className="h-20 w-20 object-contain" />
+              <img src={p.img} alt="" className="h-24 w-24 md:h-28 md:w-28 object-contain mx-auto" />
               <div className="mt-3 font-semibold text-white">{p.title}</div>
             </Card>
           </li>
@@ -482,7 +496,7 @@ function About() {
         {STATS.map((s, i) => (
           <li key={i}>
             <Card>
-              <img src={s.icon} alt="" className="h-14 w-14 object-contain" />
+              <img src={s.icon} alt="" className="h-20 w-20 md:h-24 md:w-24 object-contain mx-auto" />
               <div className="mt-3 font-semibold text-white">{s.title}</div>
             </Card>
           </li>
@@ -757,7 +771,7 @@ function ThankYouPage() {
 function ContactSection() {
   return (
     <Section id="contact" title="お問い合わせ">
-      <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" className="space-y-4 max-w-2xl">
+      <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" className="space-y-4 max-w-2xl" onSubmit={(e) => { e.preventDefault(); const f = e.currentTarget; const d = new FormData(f); fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ "form-name": "contact", name: d.get("name"), email: d.get("email"), message: d.get("message") }).toString() }).then(() => { window.location.href = "/?thank-you=1"; }).catch(() => { window.location.href = "/?thank-you=1"; }); }}>
         {/* Netlifyがフォームを識別するための hidden フィールド */}
         <input type="hidden" name="form-name" value="contact" />
         {/* 迷惑対策（bot-field） */}
