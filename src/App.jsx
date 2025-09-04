@@ -288,16 +288,22 @@ function Badge({ children }) {
 }
 
 function PrimaryButton({ href, children }) {
+  const isLine = href === LINKS.line;
   return (
-    <a href={href} className="inline-flex items-center justify-center rounded-xl text-white font-semibold px-5 py-3 shadow-sm transition hover:opacity-90" style={{ backgroundColor: "var(--accent)" }}>
+    <a href={href} className="inline-flex items-center justify-center rounded-xl font-semibold px-5 py-3 border hover:opacity-90"
+       style={{ backgroundColor: isLine ? '#06C755' : 'var(--accent)', color: isLine ? '#fff' : '#fff' }}>
+      {isLine && <LineIcon className="mr-2 h-4 w-4" />}
       {children}
     </a>
   );
 }
 
 function GhostButton({ href, children }) {
+  const isLine = href === LINKS.line;
   return (
-    <a href={href} className="inline-flex items-center justify-center rounded-xl font-semibold px-5 py-3 transition hover:opacity-90 border" style={{ color: "var(--accent)", borderColor: "var(--accent)", backgroundColor: "rgba(238,29,82,.08)" }}>
+    <a href={href} className="inline-flex items-center justify-center rounded-xl font-semibold px-5 py-3 border hover:opacity-90"
+       style={{ backgroundColor: isLine ? '#06C755' : 'rgba(238,29,82,.08)', color: isLine ? '#fff' : 'var(--accent)' }}>
+      {isLine && <LineIcon className="mr-2 h-4 w-4" />}
       {children}
     </a>
   );
@@ -309,6 +315,15 @@ function Card({ children }) {
 
 
 // Decorative divider between sections
+
+function LineIcon({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 36 36" aria-hidden="true">
+      <path fill="#fff" d="M18 4c7.18 0 13 4.7 13 10.5 0 5.8-5.82 10.5-13 10.5-.8 0-1.6-.05-2.38-.16-.44-.06-.9.05-1.26.3L10 27l.9-3.06c.12-.43.03-.9-.24-1.24C9.55 20.96 8 18.86 8 14.5 8 8.7 10.82 4 18 4z"/>
+    </svg>
+  );
+}
+
 function DividerWave() {
   return (
     <div className="relative h-10 md:h-12 -mb-px overflow-hidden">
@@ -736,8 +751,8 @@ function ThankYouPage() {
           <a href="/" className="rounded-xl text-white font-semibold px-5 py-3 hover:opacity-90" style={{ backgroundColor: "var(--accent)" }}>
             今すぐトップへ戻る
           </a>
-          <a href={LINKS.line} className="rounded-xl font-semibold px-5 py-3 border hover:opacity-90" style={{ color: "var(--accent)", borderColor: "var(--accent)", backgroundColor: "rgba(238,29,82,.08)" }}>
-            LINEで相談
+          <a href={LINKS.line} className="text-white rounded-xl font-semibold px-5 py-3 border hover:opacity-90" style={{ color: "var(--accent)", borderColor: "var(--accent)", backgroundColor: "rgba(238,29,82,.08)" }}>
+            <svg viewBox="0 0 36 36" width="18" height="18" aria-hidden="true" style={{ marginRight: 8 }}><path fill="#fff" d="M18 4c7.18 0 13 4.7 13 10.5 0 5.8-5.82 10.5-13 10.5-.8 0-1.6-.05-2.38-.16-.44-.06-.9.05-1.26.3L10 27l.9-3.06c.12-.43.03-.9-.24-1.24C9.55 20.96 8 18.86 8 14.5 8 8.7 10.82 4 18 4z"/></svg>LINEで相談
           </a>
         </div>
       </main>
