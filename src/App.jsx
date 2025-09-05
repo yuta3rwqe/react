@@ -494,8 +494,16 @@ function Hero() {
           </div>
         </div>
         <div className="relative">
-          <video src="/illustrations/promo-movie.mp4" className="w-full max-w-xl mx-auto drop-shadow rounded-2xl" autoPlay muted loop playsInline preload="metadata" poster="/illustrations/1.JPG" />
-          {/* Cyan glow */}
+         <video
+  src="/illustrations/promo-movie.mp4"
+  className="h-full max-h-[600px] mx-auto drop-shadow rounded-2xl object-contain"
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  poster="/illustrations/1.JPG"
+/>
           <div className="absolute -z-10 blur-3xl opacity-25" style={{ inset: "-20% auto auto -20%", width: "60%", height: "60%", background: "radial-gradient(60% 60% at 50% 50%, var(--accent2), transparent)" }} />
         </div>
       </div>
