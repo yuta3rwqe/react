@@ -431,6 +431,7 @@ function Header() {
       <div className="mx-auto max-w-7xl px-4 h-16 flex items-center justify-between">
         <a href="/#top" className="flex items-center gap-2">
           <img src="/illustrations/logo.svg" alt="logo" className="h-8 w-auto" />
+          <span className="font-extrabold text-lg tracking-tight">{BRAND.name}</span>
         </a>
         <nav className="hidden md:flex items-center gap-6 text-sm text-gray-300">
           <a href="/#creators" className="hover:text-white">クリエイター</a>
