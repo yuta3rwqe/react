@@ -65,12 +65,10 @@ const BENEFITS = [
   { title: "トラフィック支援", icon: "📈" },
   { title: "PK配信サポート", icon: "🤝" },
   { title: "報酬還元100%", icon: "💴" },
-  { title: "事務所ボーナス", icon: "🎁" },
-  { title: "1週間以内現金化", icon: "⏱️" },
-  { title: "事務所イベント", icon: "🏆" },
+  { title: "事務所ボーナス", icon: "💰" },
   { title: "費用なし", icon: "⭕" },
   { title: "TikTok LIVE", icon: "📺" },
-  { title: "税務サポート", icon: "🧮" },
+  { title: "事務所転送サービス", icon: "🎁" },
 ];
 
 const COMMERCE_POINTS = [
@@ -620,7 +618,7 @@ function Support() {
   const FEATURE_CARDS = [
     { title: "マネージャー制", body: "ライバー1人1人にマネージャーが付き、継続伴走。", emoji: "🤝" },
     { title: "高還元率", body: "事務所所属でもフリーと変わらない水準のバック率。", emoji: "💴" },
-    { title: "オリジナルイベント多", body: "所属限定の定期イベントを開催。大型表彰やFES形式も。", emoji: "🎉" },
+    { title: "最新ノウハウ", body: "tiktok担当者と常に連携を取っているので、最新ノウハウを共有します。", emoji: "🎓" },
   ];
 
   return (
