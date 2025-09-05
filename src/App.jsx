@@ -461,7 +461,18 @@ function Header() {
 function Hero() {
   return (
     <section id="top" className="relative isolate overflow-hidden bg-black min-h-screen flex items-center">
-      {/* 背景動画やオーバーレイは省略 */}
+      {/* ▼ 背景動画 */}
+      <video
+        src="/illustrations/promo-movie.mp4"
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+
+      {/* ▼ オーバーレイ（暗くして文字が見やすいように） */}
+      <div className="absolute inset-0 bg-black/50"></div>
 
       <div className="relative mx-auto max-w-7xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
         <div>
