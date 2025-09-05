@@ -478,47 +478,61 @@ function Hero() {
 
       {/* ▼ コンテンツ */}
       <div className="relative mx-auto max-w-7xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <Badge>ライブ配信を始めるなら</Badge>
-          <h1 className="mt-4 text-4xl md:text-6xl font-extrabold leading-tight">
-            {BRAND.name} があなたの夢をカタチに
-          </h1>
-          <p className="mt-5 text-gray-300 md:text-lg">
-            ライブ配信初心者からトップライバーまで、{BRAND.name} が全力で伴走。
-            無料相談で最適なスタートを切りましょう。
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <LineButton href={LINKS.line}>まずはLINEで無料相談</LineButton>
-            <PrimaryButton href={LINKS.entry}>エントリーはこちら</PrimaryButton>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {/* SNS アイコン */}
-            {/* Instagram */}
-            <a href={LINKS.instagram} aria-label="Instagram"
-              className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white/5 hover:bg-white/10 ring-1 ring-white/10 hover:ring-white/20">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#E4405F" }}>
-                <path fill="currentColor" d="M7 2h10a5 5 0 ..."/>
-              </svg>
-              <span className="text-white/90">Instagram</span>
-            </a>
-            {/* X */}
-            <a href={LINKS.x} aria-label="X"
-              className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white/5 hover:bg-white/10 ring-1 ring-white/10 hover:ring-white/20">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#FFFFFF" }}>
-                <path fill="currentColor" d="M3 3h3.7l5.3 ..."/>
-              </svg>
-              <span className="text-white/90">X</span>
-            </a>
-            {/* TikTok */}
-            <a href={LINKS.tiktok} aria-label="TikTok"
-              className="inline-flex items-center gap-2 rounded-xl px-4 py-2 bg-white/5 hover:bg-white/10 ring-1 ring-white/10 hover:ring-white/20">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#69C9D0" }}>
-                <path fill="currentColor" d="M16 3c.4 2.6 2.2 ..."/>
-              </svg>
-              <span className="text-white/90">TikTok</span>
-            </a>
-          </div>
-        </div>
+<div>
+  <Badge>ライブ配信を始めるなら</Badge>
+  <h1 className="mt-4 text-4xl md:text-6xl font-extrabold leading-tight">
+    {BRAND.name} があなたの夢をカタチに
+  </h1>
+  <p className="mt-5 text-gray-300 md:text-lg">
+    ライブ配信初心者からトップライバーまで、{BRAND.name} が全力で伴走。
+    無料相談で最適なスタートを切りましょう。
+  </p>
+
+  {/* ▼ SNSアイコン群を本文テキスト直下に配置 */}
+  <div className="mt-6 flex flex-wrap gap-3">
+    {/* Instagram */}
+    <a
+      href={LINKS.instagram}
+      aria-label="Instagram"
+      className="inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-white/10 hover:ring-white/20 bg-white/5 hover:bg-white/10"
+    >
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#E4405F" }}>
+        <path fill="currentColor" d="M7 2h10a5 5 0 ..."/>
+      </svg>
+      <span className="text-white/90">Instagram</span>
+    </a>
+
+    {/* X */}
+    <a
+      href={LINKS.x}
+      aria-label="X"
+      className="inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-white/10 hover:ring-white/20 bg-white/5 hover:bg-white/10"
+    >
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#FFFFFF" }}>
+        <path fill="currentColor" d="M3 3h3.7l5.3 ..."/>
+      </svg>
+      <span className="text-white/90">X</span>
+    </a>
+
+    {/* TikTok */}
+    <a
+      href={LINKS.tiktok}
+      aria-label="TikTok"
+      className="inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-white/10 hover:ring-white/20 bg-white/5 hover:bg-white/10"
+    >
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#69C9D0" }}>
+        <path fill="currentColor" d="M16 3c.4 2.6 2.2 ..."/>
+      </svg>
+      <span className="text-white/90">TikTok</span>
+    </a>
+  </div>
+
+  {/* ▼ CTA ボタン群 */}
+  <div className="mt-8 flex flex-wrap gap-3">
+    <LineButton href={LINKS.line}>まずはLINEで無料相談</LineButton>
+    <PrimaryButton href={LINKS.entry}>エントリーはこちら</PrimaryButton>
+  </div>
+</div>
       </div>
     </section>
   );
