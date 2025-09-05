@@ -463,76 +463,97 @@ function Header() {
 function Hero() {
   return (
     <section id="top" className="relative isolate overflow-hidden bg-black min-h-screen flex items-center">
-      {/* ▼ 背景動画 */}
-      <video
-        src="/illustrations/promo-movie.mp4"
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-      />
+      {/* 背景動画やオーバーレイは省略 */}
 
-      {/* ▼ オーバーレイ（暗くして文字が見やすいように） */}
-      <div className="absolute inset-0 bg-black/50"></div>
-
-      {/* ▼ コンテンツ */}
       <div className="relative mx-auto max-w-7xl px-4 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-<div>
-  <Badge>ライブ配信を始めるなら</Badge>
-  <h1 className="mt-4 text-4xl md:text-6xl font-extrabold leading-tight">
-    {BRAND.name} があなたの夢をカタチに
-  </h1>
-  <p className="mt-5 text-gray-300 md:text-lg">
-    ライブ配信初心者からトップライバーまで、{BRAND.name} が全力で伴走。
-    無料相談で最適なスタートを切りましょう。
-  </p>
+        <div>
+          <Badge>ライブ配信を始めるなら</Badge>
+          <h1 className="mt-4 text-4xl md:text-6xl font-extrabold leading-tight">
+            {BRAND.name} があなたの夢をカタチに
+          </h1>
+          <p className="mt-5 text-gray-300 md:text-lg">
+            ライブ配信初心者からトップライバーまで、{BRAND.name} が全力で伴走。
+            無料相談で最適なスタートを切りましょう。
+          </p>
 
-  {/* ▼ SNSアイコン群を本文テキスト直下に配置 */}
-  <div className="mt-6 flex flex-wrap gap-3">
-    {/* Instagram */}
-    <a
-      href={LINKS.instagram}
-      aria-label="Instagram"
-      className="inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-white/10 hover:ring-white/20 bg-white/5 hover:bg-white/10"
-    >
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#E4405F" }}>
-        <path fill="currentColor" d="M7 2h10a5 5 0 ..."/>
-      </svg>
-      <span className="text-white/90">Instagram</span>
-    </a>
+          {/* ▼ SNSアイコン群（テキスト直下） */}
+          <div className="mt-6 flex flex-wrap gap-3">
+            {/* Instagram */}
+            <a
+              href={LINKS.instagram}
+              aria-label="Instagram"
+              className="inline-flex items-center gap-2 rounded-xl px-4 py-2
+                         ring-1 ring-white/10 hover:ring-white/20
+                         bg-white/5 hover:bg-white/10"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                style={{ color: "#E4405F" }}
+              >
+                <path
+                  fill="currentColor"
+                  d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm11 1.8a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 .001 6.001A3 3 0 0 0 12 9z"
+                />
+              </svg>
+              <span className="text-white/90">Instagram</span>
+            </a>
 
-    {/* X */}
-    <a
-      href={LINKS.x}
-      aria-label="X"
-      className="inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-white/10 hover:ring-white/20 bg-white/5 hover:bg-white/10"
-    >
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#FFFFFF" }}>
-        <path fill="currentColor" d="M3 3h3.7l5.3 ..."/>
-      </svg>
-      <span className="text-white/90">X</span>
-    </a>
+            {/* X */}
+            <a
+              href={LINKS.x}
+              aria-label="X"
+              className="inline-flex items-center gap-2 rounded-xl px-4 py-2
+                         ring-1 ring-white/10 hover:ring-white/20
+                         bg-white/5 hover:bg-white/10"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                style={{ color: "#FFFFFF" }}
+              >
+                <path
+                  fill="currentColor"
+                  d="M3 3h3.7l5.3 7.2L17.6 3H21l-7.2 9.7L21 21h-3.7l-5.6-7.5L6.4 21H3l7.5-10L3 3z"
+                />
+              </svg>
+              <span className="text-white/90">X</span>
+            </a>
 
-    {/* TikTok */}
-    <a
-      href={LINKS.tiktok}
-      aria-label="TikTok"
-      className="inline-flex items-center gap-2 rounded-xl px-4 py-2 ring-1 ring-white/10 hover:ring-white/20 bg-white/5 hover:bg-white/10"
-    >
-      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style={{ color: "#69C9D0" }}>
-        <path fill="currentColor" d="M16 3c.4 2.6 2.2 ..."/>
-      </svg>
-      <span className="text-white/90">TikTok</span>
-    </a>
-  </div>
+            {/* TikTok */}
+            <a
+              href={LINKS.tiktok}
+              aria-label="TikTok"
+              className="inline-flex items-center gap-2 rounded-xl px-4 py-2
+                         ring-1 ring-white/10 hover:ring-white/20
+                         bg-white/5 hover:bg-white/10"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                style={{ color: "#69C9D0" }}
+              >
+                <path
+                  fill="currentColor"
+                  d="M16 3c.4 2.6 2.2 4.5 5 5v3.2c-1.9 0-3.6-.6-5-1.7v5.5c0 4.1-3 7.6-7.4 7.9C4.8 23.2 1.1 20 1 15.8 1 11.7 4.3 8.4 8.4 8.4c.6 0 1.1.1 1.6.2v3.4c-.5-.2-1-.3-1.6-.3-2.2 0-4 1.8-4 4 0 2.3 2 4.2 4.4 3.9 1.9-.2 3.4-1.9 3.4-3.9V3h3.8z"
+                />
+              </svg>
+              <span className="text-white/90">TikTok</span>
+            </a>
+          </div>
 
-  {/* ▼ CTA ボタン群 */}
-  <div className="mt-8 flex flex-wrap gap-3">
-    <LineButton href={LINKS.line}>まずはLINEで無料相談</LineButton>
-    <PrimaryButton href={LINKS.entry}>エントリーはこちら</PrimaryButton>
-  </div>
-</div>
+          {/* ▼ CTA ボタン群 */}
+          <div className="mt-8 flex flex-wrap gap-3">
+            <LineButton href={LINKS.line}>まずはLINEで無料相談</LineButton>
+            <PrimaryButton href={LINKS.entry}>エントリーはこちら</PrimaryButton>
+          </div>
+        </div>
       </div>
     </section>
   );
