@@ -1,3 +1,9 @@
+[[redirects]]
+from = "/thank-you/*"
+to = "/thank-you/:splat"
+status = 200
+force = false
+
 [build]
   command = "npm run build"
   publish = "dist"
@@ -10,6 +16,8 @@
   force = true
 
 # Thank-you redirect (also works after POST)
+
+
 [[redirects]]
   from = "/thank-you"
   to = "/?thank-you=1"
