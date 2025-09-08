@@ -251,7 +251,7 @@ function CompanyPage() {
           <div className="mt-10 rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/0 p-8">
             <p className="text-white/80">採用・提携のご相談も承っています。</p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <a href="/#apply" className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white" style={{ backgroundColor: "#EE1D52" }}>配信者エントリー</a>
+              <a href="https://forms.gle/xBmBethDd9uvtFJx5" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white" style={{ backgroundColor: "#EE1D52" }}>配信者エントリー</a>
               <a href="/#contact" className="inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold text-white" style={{ backgroundColor: "#EE1D52" }}>お問い合わせ</a>
             </div>
           </div>
@@ -889,7 +889,7 @@ function ThankYouPage() {
 function ContactSection() {
   return (
     <Section id="contact" title="お問い合わせ">
-      <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" className="space-y-4 max-w-2xl" onSubmit={(e) => { e.preventDefault(); const f = e.currentTarget; const d = new FormData(f); fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ "form-name": "contact", name: d.get("name"), email: d.get("email"), message: d.get("message") }).toString() }).then(() => { window.location.href = "/?thank-you=1"; }).catch(() => { window.location.href = "/?thank-you=1"; }); }}>
+      <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" className="space-y-4 max-w-2xl" , body: new URLSearchParams({ "form-name": "contact", name: d.get("name"), email: d.get("email"), message: d.get("message") }).toString() }).then(() => { window.location.href = "/?thank-you=1"; }).catch(() => { window.location.href = "/?thank-you=1"; }); }}>
         {/* Netlifyがフォームを識別するための hidden フィールド */}
         <input type="hidden" name="form-name" value="contact" />
         {/* 迷惑対策（bot-field） */}
