@@ -12,7 +12,7 @@ const BRAND = {
 
 const LINKS = {
   line: "https://line.me/R/ti/p/@786bdyyp?oat_content=qr#~",
-  entry: "#apply",
+  entry: "https://forms.gle/xBmBethDd9uvtFJx5",
   instagram: "https://www.instagram.com/joyvoyage_group.jp?igsh=eHY1c3E5OTF0amJo",
   x: "https://x.com/",
   tiktok: "https://www.tiktok.com/@joy.voyage_jp",
