@@ -889,7 +889,7 @@ function ThankYouPage() {
 function ContactSection() {
   return (
     <Section id="contact" title="お問い合わせ">
-      <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" className="space-y-4 max-w-2xl" , body: new URLSearchParams({ "form-name": "contact", name: d.get("name"), email: d.get("email"), message: d.get("message") }).toString() }).then(() => { window.location.href = "/?thank-you=1"; }).catch(() => { window.location.href = "/?thank-you=1"; }); }}>
+      <form name="contact" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" className="space-y-4 max-w-2xl">
         {/* Netlifyがフォームを識別するための hidden フィールド */}
         <input type="hidden" name="form-name" value="contact" />
         {/* 迷惑対策（bot-field） */}
