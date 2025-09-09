@@ -211,12 +211,10 @@ function CompanyPage() {
                     <dt className="px-6 py-5 text-white/60">会社名</dt>
                     <dd className="md:col-span-2 px-6 py-5">株式会社ジョイボヤージュ</dd>
                   </div>
-<dl className="divide-y divide-white/10">
-  {/* 電話番号 */}
-  <div className="px-6 py-5 grid grid-cols-3 gap-4">
-    <dt className="text-sm font-medium text-white/70">電話番号</dt>
-    <dd className="mt-1 text-sm text-white col-span-2">03-6281-5886</dd>
-  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-3">
+                    <dt className="px-6 py-5 text-white/60">電話番号</dt>
+                    <dd className="md:col-span-2 px-6 py-5">03-6281-5886</dd>
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-3">
                     <dt className="px-6 py-5 text-white/60">所在地</dt>
                     <dd className="md:col-span-2 px-6 py-5">
