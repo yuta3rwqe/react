@@ -43,7 +43,7 @@ const PROBLEMS = [
 const STATS = [
   { title: "ライブ配信のトップ代理店", icon: "/illustrations/stat-agency.png" },
   { title: "TikTok売上 1位継続", icon: "/illustrations/stat-top.png" },
-  { title: "世界4拠点で展開", icon: "/illustrations/stat-globe.png" },
+  { title: "世界6拠点で展開", icon: "/illustrations/stat-globe.png" },
 ];
 
 const SUPPORT = [
