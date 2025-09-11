@@ -574,12 +574,24 @@ function Hero() {
 
 function Creators() {
   return (
-    <Section id="creators" title="活躍中のクリエイターたち" subtitle="音楽・トーク・料理・コスメ…得意分野を活かして活躍中！">
+    <Section
+      id="creators"
+      title="活躍中のクリエイターたち"
+      subtitle="音楽・トーク・料理・コスメ…得意分野を活かして活躍中！"
+    >
       <ul className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {CREATORS.map((c, i) => (
           <li key={i}>
             <Card>
-              <img src={c.img} alt={c.name} className="h-36 w-full object-cover rounded-xl" />
+              {/* ここを変更：比率固定＋背景＋中央寄せ */}
+              <div className="aspect-square overflow-hidden rounded-xl bg-black/40 flex items-center justify-center">
+                <img
+                  src={c.img}
+                  alt={c.name}
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
               <div className="mt-4">
                 <div className="font-semibold text-white">{c.name}</div>
                 <div className="text-gray-400 text-sm">{c.handle}</div>
