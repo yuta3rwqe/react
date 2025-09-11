@@ -22,8 +22,8 @@ const LINKS = {
 };
 
 const CREATORS = [
-  { name: "李可馨", handle: "@li_kexin", img: "/illustrations/1.jpg" },
-  { name: "周依依", handle: "@yiyi.zhou", img: "/illustrations/2.jpg" },
+  { name: "天音", handle: "@tianyin_amane", img: "/illustrations/1.jpg" },
+  { name: "まいちゃん🍉🍧", handle: "@maimai._.dayo", img: "/illustrations/2.jpg" },
   { name: "林可晴", handle: "@keqing_lin", img: "/illustrations/3.jpg" },
   { name: "赵悦彤", handle: "@yuetong_zhao", img: "/illustrations/4.jpg" },
   { name: "王若宁", handle: "@wang_ruoning", img: "/illustrations/5.jpg" },
