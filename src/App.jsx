@@ -67,7 +67,6 @@ const BENEFITS = [
   { title: "報酬還元100%", icon: "💴" },
   { title: "事務所ボーナス", icon: "💰" },
   { title: "費用なし", icon: "⭕" },
-  { title: "TikTok LIVE", icon: "📺" },
   { title: "事務所転送サービス", icon: "🎁" },
 ];
 
