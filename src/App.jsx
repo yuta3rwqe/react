@@ -11,7 +11,7 @@ const BRAND = {
 };
 
 const LINKS = {
-  line: "https://line.me/R/ti/p/@786bdyyp?oat_content=qr#~",
+  line: "https://line.me/R/ti/p/@786bdyyp",
   entry: "https://forms.gle/xBmBethDd9uvtFJx5",
   instagram: "https://www.instagram.com/joyvoyage_group.jp?igsh=eHY1c3E5OTF0amJo",
   x: "https://x.com/voyage_joy",
